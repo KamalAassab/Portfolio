@@ -6,31 +6,22 @@ import { TypingTitle } from "@/components/typing-title"
 
 const education = [
   {
-    year: "2024 — Present",
-    institution: "Klaviyo",
-    degree: "Senior Frontend Engineer, Accessibility",
+    year: "June 2025",
+    institution: "Faculty of Sciences and Techniques, Settat, Morocco",
+    degree: "Bachelor in Information system and digital transformation",
     description:
-      "Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams to implement best practices in web accessibility.",
-    link: "#",
-    skills: ["JavaScript", "TypeScript", "React", "Storybook"],
+      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology.",
+    link: "#", // Replace with actual diploma link if available
+    skills: ["Information Systems", "Digital Transformation", "Project Management", "Business Analysis"],
   },
   {
-    year: "2018 — 2024",
-    institution: "Various Companies",
-    degree: "Front-end Developer",
+    year: "June 2024",
+    institution: "Faculty of Sciences and Techniques, Settat, Morocco",
+    degree: "Diploma in Scientific and Technical University Studies: Mathematics, Computer Science, and Physics",
     description:
-      "Developed software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios.",
-    link: "#",
-    skills: ["Next.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
-  },
-  {
-    year: "2014 — 2018",
-    institution: "University of Technology",
-    degree: "Bachelor of Computer Science",
-    description:
-      "Focused on web technologies, human-computer interaction, and software engineering principles. Graduated with honors.",
-    link: "/diploma.pdf",
-    skills: ["Algorithms", "Data Structures", "Web Development", "UI/UX"],
+      "Interdisciplinary program covering foundational knowledge in mathematics, computer science fundamentals, and physics principles. Developed strong analytical and problem-solving skills.",
+    link: "#", // Replace with actual diploma link if available
+    skills: ["Mathematics", "Computer Science", "Physics", "Algorithms", "Problem Solving"],
   },
 ]
 
