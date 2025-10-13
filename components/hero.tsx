@@ -288,8 +288,37 @@ export function Hero() {
               {/* Profile Image Card */}
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm">
                 <div className="w-full h-full bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center shadow-lg">
-                    <span className="text-4xl font-bold text-white">KA</span>
+                  {/* Redesigned Professional Avatar */}
+                  <div className="relative w-40 h-40 rounded-full flex items-center justify-center
+                              bg-gradient-to-br from-emerald-600 to-cyan-700
+                              shadow-2xl shadow-emerald-500/40
+                              animate-float-professional border border-emerald-400/50">
+                    {/* Inner glowing core */}
+                    <div className="absolute inset-4 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 opacity-70 blur-lg animate-pulse" />
+                    {/* Holographic overlay */}
+                    <div className="absolute inset-0 rounded-full border-4 border-transparent animate-spin"
+                         style={{
+                           borderImage: 'linear-gradient(to right, #10b981, #06b6d4, #6366f1) 1',
+                           animationDuration: '8s',
+                           animationDirection: 'reverse'
+                         }}
+                    />
+                    {/* Text / Symbol */}
+                    <span className="relative z-10 text-5xl font-extrabold text-white text-shadow-lg animate-fade-in-out">
+                      K.A
+                    </span>
+                    {/* Orbital particles */}
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1.5 h-1.5 bg-white rounded-full animate-orbital-particle"
+                        style={{
+                          animationDelay: `${i * 0.8}s`,
+                          animationDuration: `${5 + Math.random() * 3}s`,
+                          transform: `rotate(${Math.random() * 360}deg) translate(50px) rotate(-${Math.random() * 360}deg)`
+                        }}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
