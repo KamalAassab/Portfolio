@@ -95,9 +95,17 @@ export function Hero() {
                 <span className="terminal-path">$ ~/portfolio</span>
                 <span className="terminal-cursor"></span>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-balance font-mono text-white">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">Kamal</span>
-              </h1>
+              <div className="relative inline-block">
+                <TypingTitle 
+                  text="Hi, I'm Kamal" 
+                  speed={80}
+                  delay={500} // Shorter delay for the main title
+                  className="text-5xl lg:text-6xl font-bold text-balance font-mono text-white"
+                />
+                {/* Epic animated underline */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full animate-pulse" />
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full blur-md animate-pulse" />
+              </div>
               <div className="relative inline-block">
                 <TypingTitle 
                   text="Front-end Developer" 

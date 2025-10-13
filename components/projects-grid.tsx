@@ -33,6 +33,7 @@ export function ProjectsGrid() {
                 text="Featured Projects" 
                 speed={80}
                 delay={1000}
+                className="text-5xl lg:text-6xl font-bold text-balance text-white font-mono"
               />
               {/* Epic animated underline */}
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full animate-pulse" />
