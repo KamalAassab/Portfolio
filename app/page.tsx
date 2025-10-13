@@ -40,15 +40,8 @@ const ParticleEffects = dynamic(() => import("@/components/particle-effects").th
 })
 
 export default function Home() {
-  const [showWebsite, setShowWebsite] = React.useState(false)
-
-
-  const handleStartWebsite = () => {
-    setShowWebsite(true)
-  }
-
   return (
-    <LoadingManager onWebsiteStart={handleStartWebsite}>
+    <LoadingManager>
       {({ isLoading }) => (
         <>
           {/* Loading Screen */}
@@ -61,11 +54,11 @@ export default function Home() {
           {/* Website Content with Professional Multi-Directional Animations */}
           <div className="relative min-h-screen overflow-hidden">
             {/* Unified Space Background */}
-            <SpaceBackground isVisible={!isLoading && showWebsite} />
+            <SpaceBackground isVisible={!isLoading} />
             
             {/* Particle Effects - Optimized */}
             <ParticleEffects 
-              isVisible={!isLoading && showWebsite} 
+              isVisible={!isLoading} 
               count={5}
               delay={300}
             />
@@ -80,7 +73,7 @@ export default function Home() {
                 <main id="main-content">
                   {/* Hero Section - Slides from bottom with scale */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="scaleIn"
                     duration={700}
                     delay={200}
@@ -90,7 +83,7 @@ export default function Home() {
 
                   {/* About Section - Slides from left */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="slideLeft"
                     duration={600}
                     delay={300}
@@ -100,7 +93,7 @@ export default function Home() {
 
                   {/* Technical Skills Section - Slides from right */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="slideRight"
                     duration={600}
                     delay={350}
@@ -110,7 +103,7 @@ export default function Home() {
 
                   {/* Education Timeline - Slides from left */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="slideLeft"
                     duration={600}
                     delay={400}
@@ -120,7 +113,7 @@ export default function Home() {
 
                   {/* Projects Grid - Rotates in */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="rotateIn"
                     duration={700}
                     delay={500}
@@ -130,7 +123,7 @@ export default function Home() {
 
                   {/* Contact Form - Slides from bottom */}
                   <ProfessionalReveal 
-                    isVisible={!isLoading && showWebsite} 
+                    isVisible={!isLoading} 
                     direction="slideUp"
                     duration={600}
                     delay={600}
@@ -142,7 +135,7 @@ export default function Home() {
 
               {/* Footer - Fades in - Full Width */}
               <ProfessionalReveal 
-                isVisible={!isLoading && showWebsite} 
+                isVisible={!isLoading} 
                 direction="fadeIn"
                 duration={500}
                 delay={700}
