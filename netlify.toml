@@ -1,6 +1,6 @@
 [build]
-  # Build command for Next.js
-  command = "npm run build"
+  # Build command for Next.js with legacy peer deps
+  command = "npm install --legacy-peer-deps && npm run build"
   
   # Output directory for Next.js
   publish = ".next"
@@ -11,6 +11,9 @@
   
   # Next.js environment
   NEXT_TELEMETRY_DISABLED = "1"
+  
+  # NPM configuration for peer dependency conflicts
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
 
 # Redirect rules for Next.js
 [[redirects]]
