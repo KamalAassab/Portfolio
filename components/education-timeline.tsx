@@ -12,7 +12,7 @@ const education = [
     description:
       "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology.",
     link: "#", // Replace with actual diploma link if available
-    skills: ["Information Systems", "Digital Transformation", "Project Management", "Business Analysis"],
+    skills: ["Information Systems", "Digital Transformation", "Project Management", "Business Analysis", "Web Development", "Project Architecture"],
   },
   {
     year: "June 2024",
@@ -31,7 +31,7 @@ export function EducationTimeline() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           <TypingTitle 
-            text="Experience & Education" 
+            text="My Career & Experience" 
             speed={80}
             delay={1500}
           />
@@ -80,17 +80,6 @@ export function EducationTimeline() {
                         <h3 className="text-xl font-bold text-purple-400">{item.degree}</h3>
                         <p className="text-gray-300">{item.institution}</p>
                       </div>
-                      {item.link && (
-                        <a
-                          href={item.link}
-                          className="inline-flex items-center gap-1 text-sm text-cyan-400 hover:underline"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Details
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
-                      )}
                     </div>
                     <p className="text-gray-400 text-pretty">{item.description}</p>
                     <div className="flex flex-wrap gap-2 pt-2">
