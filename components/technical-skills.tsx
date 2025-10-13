@@ -691,7 +691,7 @@ export function TechnicalSkills() {
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full blur-md animate-pulse" />
             </div>
             
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed animate-fade-up animation-delay-200">
+            <p className="text-lg text-gray-300 mx-auto leading-relaxed animate-fade-up animation-delay-200 whitespace-nowrap">
               Explore my technical expertise across languages, frameworks, and tools
             </p>
           </div>
