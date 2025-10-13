@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { ArrowDown, Download, ExternalLink } from "lucide-react"
+import { ArrowDown, Download, ExternalLink, Sparkles, Layout } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { TypingTitle } from "@/components/typing-title"
@@ -290,7 +290,7 @@ export function Hero() {
               <div className="relative aspect-square w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm
                           transition-all duration-700 transform hover:scale-[1.02] hover:shadow-emerald-500/20 hover:shadow-3xl hover:border-emerald-400/50 hover:-translate-y-1">
                 <Image
-                  src="/avatar.jpg" 
+                  src="/avatar.png" 
                   alt="Kamal Aassab Profile Picture"
                   fill
                   priority
@@ -308,12 +308,18 @@ export function Hero() {
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-400/50 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
               </div>
 
-              {/* Floating Tech Badges */}
-              <div className="absolute -top-4 -right-4 bg-gray-900/90 backdrop-blur-sm border border-emerald-500/30 rounded-lg px-4 py-2 shadow-lg animate-float">
-                <p className="text-sm font-semibold text-emerald-300">⚛️ React Expert</p>
+              {/* Floating Professional Badges */}
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-indigo-900/90 to-purple-900/90 backdrop-blur-sm border border-indigo-500/30 rounded-lg px-4 py-2 shadow-lg animate-float-pro animation-delay-500 group-hover:scale-110 group-hover:shadow-indigo-400/40 transition-all duration-500">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-indigo-400 animate-pulse" />
+                  <p className="text-sm font-semibold text-indigo-300">AI & ML Enthusiast</p>
+                </div>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-gray-900/90 backdrop-blur-sm border border-teal-500/30 rounded-lg px-4 py-2 shadow-lg animate-float animation-delay-1000">
-                <p className="text-sm font-semibold text-teal-300">🎨 UI/UX Focused</p>
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-purple-900/90 to-pink-900/90 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-2 shadow-lg animate-float-pro animation-delay-1500 group-hover:scale-110 group-hover:shadow-purple-400/40 transition-all duration-500">
+                <div className="flex items-center gap-2">
+                  <Layout className="h-4 w-4 text-pink-400 animate-pulse" />
+                  <p className="text-sm font-semibold text-pink-300">Clean Code Advocate</p>
+                </div>
               </div>
             </div>
           </div>
