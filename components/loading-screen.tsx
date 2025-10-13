@@ -339,9 +339,32 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
 
             {/* Professional Loading Indicator */}
             <div className="space-y-4 text-center">
-              <div className="relative">
-                <div className="w-16 h-16 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin mx-auto"></div>
-                <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-cyan-400/40 rounded-full animate-spin mx-auto" style={{animationDirection: 'reverse', animationDuration: '1.5s'}}></div>
+              <div className="relative w-20 h-20 mx-auto">
+                <svg className="w-full h-full" viewBox="0 0 100 100">
+                  {/* Background circle */}
+                  <circle
+                    className="text-emerald-500/20 stroke-current"
+                    strokeWidth="6"
+                    cx="50"
+                    cy="50"
+                    r="47"
+                    fill="transparent"
+                  />
+                  {/* Progress circle */}
+                  <circle
+                    className="text-emerald-500 stroke-current transition-all duration-300 ease-linear"
+                    strokeWidth="6"
+                    cx="50"
+                    cy="50"
+                    r="47"
+                    fill="transparent"
+                    strokeDasharray={`${2 * Math.PI * 47}`}
+                    strokeDashoffset={`${2 * Math.PI * 47 - (progress / 100) * (2 * Math.PI * 47)}`}
+                    transform="rotate(-90 50 50)"
+                  />
+                </svg>
+                {/* Inner glowing effect */}
+                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 rounded-full blur-md animate-pulse mx-auto transition-all duration-300 opacity-50"></div>
               </div>
               <div className="text-sm font-mono text-gray-300">
                 <span className="text-emerald-400">Initializing</span> portfolio environment... {progress}%
