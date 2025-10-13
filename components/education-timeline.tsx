@@ -3,35 +3,19 @@ import { TypingTitle } from "@/components/typing-title"
 
 const timelineItems = [
   {
-    year: "2024 — Present",
-    degree: "Senior Frontend Engineer",
-    institution: "Blue Cube Digital",
-    description:
-      "Developed and managed web projects, including frontend/backend, CMS dashboards, and responsive, accessible web pages with PHP, MySQL, and JavaScript.",
-    type: "experience"
-  },
-  {
-    year: "June 2025",
-    institution: "Faculty of Sciences and Techniques, Settat, Morocco",
-    degree: "Bachelor in Information system and digital transformation",
-    description:
-      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology.",
-    type: "education"
-  },
-  {
-    year: "2020 — 2024",
-    degree: "Associate Solution Leader",
-    institution: "Brane Enterprises",
-    description:
-      "Built web features, product prototypes, and reusable components/microservices, implemented UI improvements and 3D UI interface compatible with Typescript.",
-    type: "experience"
-  },
-  {
     year: "June 2024",
     institution: "Faculty of Sciences and Techniques, Settat, Morocco",
     degree: "Diploma in Scientific and Technical University Studies: Mathematics, Computer Science, and Physics",
     description:
       "Interdisciplinary program covering foundational knowledge in mathematics, computer science fundamentals, and physics principles. Developed strong analytical and problem-solving skills.",
+    type: "education"
+  },
+  {
+    year: "June 2025",
+    institution: "Faculty of Sciences and Techniques, Settat, Morocco",
+        degree: "Bachelor in Information system and digital transformation",
+    description:
+      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology.",
     type: "education"
   },
   {
