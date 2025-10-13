@@ -66,14 +66,14 @@ export function EducationTimeline() {
 
                     {/* Left Section: Diploma and Institution */}
                     <div className="flex-1 text-center md:text-left pr-0 md:pr-16 order-1 md:order-1 mb-4 md:mb-0">
-                      <h3 className="text-xl font-bold text-white">{item.degree}</h3>
-                      <p className="text-gray-400 text-sm">{item.institution}</p>
+                      <h3 className="text-lg font-bold text-white">{item.degree}</h3>
+                      <p className="text-gray-400 text-xs">{item.institution}</p>
                     </div>
 
                     {/* Center Section: Year and Glowing Dot (acts as the timeline point) */}
                     <div className="relative w-24 flex-shrink-0 flex justify-center items-center order-2 md:order-2">
                       {/* Year on the timeline */}
-                      <span className="text-2xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 bg-black px-2">
+                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 bg-black px-2">
                         {item.year}
                       </span>
                       {/* Glowing Timeline Dot - positioned over the line, behind the year text */}
@@ -82,7 +82,7 @@ export function EducationTimeline() {
 
                     {/* Right Section: Description */}
                     <div className="flex-1 text-center md:text-left pl-0 md:pl-16 order-3 md:order-3 mt-4 md:mt-0">
-                      <p className="text-gray-500 text-pretty text-sm">{item.description}</p>
+                      <p className="text-gray-500 text-pretty text-xs">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -104,14 +104,14 @@ export function EducationTimeline() {
 
                     {/* Left Section: Role and Company */}
                     <div className="flex-1 text-center md:text-left pr-0 md:pr-16 order-1 md:order-1 mb-4 md:mb-0">
-                      <h3 className="text-xl font-bold text-white">{item.degree}</h3>
-                      <p className="text-gray-400 text-sm">{item.institution}</p>
+                      <h3 className="text-lg font-bold text-white">{item.degree}</h3>
+                      <p className="text-gray-400 text-xs">{item.institution}</p>
                     </div>
 
                     {/* Center Section: Year and Glowing Dot */}
                     <div className="relative w-24 flex-shrink-0 flex justify-center items-center order-2 md:order-2">
                       {/* Year on the timeline */}
-                      <span className="text-2xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 bg-black px-2">
+                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 bg-black px-2">
                         {item.year}
                       </span>
                       {/* Glowing Timeline Dot */}
@@ -120,7 +120,7 @@ export function EducationTimeline() {
 
                     {/* Right Section: Description */}
                     <div className="flex-1 text-center md:text-left pl-0 md:pl-16 order-3 md:order-3 mt-4 md:mt-0">
-                      <p className="text-gray-500 text-pretty text-sm">{item.description}</p>
+                      <p className="text-gray-500 text-pretty text-xs">{item.description}</p>
                     </div>
                   </div>
                 </div>
