@@ -110,7 +110,7 @@ export function EducationTimeline() {
                     {/* Center Section: Year and Glowing Dot (acts as the timeline point) */}
                     <div className="relative w-24 flex-shrink-0 flex justify-center items-center order-2 md:order-2">
                       {/* Year on the timeline */}
-                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 bg-black px-2">
+                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10">
                         {entry.year}
                       </span>
                       {/* Glowing Timeline Dot - positioned over the line, behind the year text */}
