@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { ProfessionalReveal } from "@/components/professional-reveal"
+import { LoadingManager } from "@/components/loading-manager"
 import { SpaceBackground } from "@/components/space-background"
 
 // Lazy load heavy components for better performance
@@ -39,98 +40,119 @@ const ParticleEffects = dynamic(() => import("@/components/particle-effects").th
 })
 
 export default function Home() {
+  const [showWebsite, setShowWebsite] = React.useState(false)
+
+
+  const handleStartWebsite = () => {
+    setShowWebsite(true)
+  }
+
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Unified Space Background */}
-      <SpaceBackground isVisible={true} />
-      
-      {/* Particle Effects - Optimized */}
-      <ParticleEffects 
-        isVisible={true} 
-        count={5}
-        delay={300}
-      />
+    <LoadingManager onWebsiteStart={handleStartWebsite}>
+      {({ isLoading }) => (
+        <>
+          {/* Loading Screen */}
+          {isLoading && (
+            <div className="fixed inset-0 z-50">
+              {/* Loading screen content will be rendered here by LoadingManager */}
+            </div>
+          )}
 
-      {/* Navbar - Always visible */}
-      <Navbar />
-
-      {/* Content with Staggered Animations - Centered with navbar space */}
-      <div className="relative z-10">
-        {/* Main content with navbar spacing */}
-        <div className="md:mr-24 lg:mr-32">
-          <main id="main-content">
-            {/* Hero Section - Slides from bottom with scale */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="scaleIn"
-              duration={700}
-              delay={200}
-            >
-              <Hero />
-            </ProfessionalReveal>
-
-            {/* About Section - Slides from left */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="slideLeft"
-              duration={600}
+          {/* Website Content with Professional Multi-Directional Animations */}
+          <div className="relative min-h-screen overflow-hidden">
+            {/* Unified Space Background */}
+            <SpaceBackground isVisible={!isLoading && showWebsite} />
+            
+            {/* Particle Effects - Optimized */}
+            <ParticleEffects 
+              isVisible={!isLoading && showWebsite} 
+              count={5}
               delay={300}
-            >
-              <About />
-            </ProfessionalReveal>
+            />
 
-            {/* Technical Skills Section - Slides from right */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="slideRight"
-              duration={600}
-              delay={350}
-            >
-              <TechnicalSkills />
-            </ProfessionalReveal>
+            {/* Navbar - Always visible */}
+            <Navbar />
 
-            {/* Education Timeline - Slides from left */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="slideLeft"
-              duration={600}
-              delay={400}
-            >
-              <EducationTimeline />
-            </ProfessionalReveal>
+            {/* Content with Staggered Animations - Centered with navbar space */}
+            <div className="relative z-10">
+              {/* Main content with navbar spacing */}
+              <div className="md:mr-24 lg:mr-32">
+                <main id="main-content">
+                  {/* Hero Section - Slides from bottom with scale */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="scaleIn"
+                    duration={700}
+                    delay={200}
+                  >
+                    <Hero />
+                  </ProfessionalReveal>
 
-            {/* Projects Grid - Rotates in */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="rotateIn"
-              duration={700}
-              delay={500}
-            >
-              <ProjectsGrid />
-            </ProfessionalReveal>
+                  {/* About Section - Slides from left */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="slideLeft"
+                    duration={600}
+                    delay={300}
+                  >
+                    <About />
+                  </ProfessionalReveal>
 
-            {/* Contact Form - Slides from bottom */}
-            <ProfessionalReveal 
-              isVisible={true} 
-              direction="slideUp"
-              duration={600}
-              delay={600}
-            >
-              <ContactForm />
-            </ProfessionalReveal>
-          </main>
-        </div>
+                  {/* Technical Skills Section - Slides from right */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="slideRight"
+                    duration={600}
+                    delay={350}
+                  >
+                    <TechnicalSkills />
+                  </ProfessionalReveal>
 
-        {/* Footer - Fades in - Full Width */}
-        <ProfessionalReveal 
-          isVisible={true} 
-          direction="fadeIn"
-          duration={500}
-          delay={700}
-        >
-          <Footer />
-        </ProfessionalReveal>
-      </div>
-    </div>
+                  {/* Education Timeline - Slides from left */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="slideLeft"
+                    duration={600}
+                    delay={400}
+                  >
+                    <EducationTimeline />
+                  </ProfessionalReveal>
+
+                  {/* Projects Grid - Rotates in */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="rotateIn"
+                    duration={700}
+                    delay={500}
+                  >
+                    <ProjectsGrid />
+                  </ProfessionalReveal>
+
+                  {/* Contact Form - Slides from bottom */}
+                  <ProfessionalReveal 
+                    isVisible={!isLoading && showWebsite} 
+                    direction="slideUp"
+                    duration={600}
+                    delay={600}
+                  >
+                    <ContactForm />
+                  </ProfessionalReveal>
+                </main>
+              </div>
+
+              {/* Footer - Fades in - Full Width */}
+              <ProfessionalReveal 
+                isVisible={!isLoading && showWebsite} 
+                direction="fadeIn"
+                duration={500}
+                delay={700}
+              >
+                <Footer />
+              </ProfessionalReveal>
+            </div>
+          </div>
+        </>
+      )}
+    </LoadingManager>
   )
 }
