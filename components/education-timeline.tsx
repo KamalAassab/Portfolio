@@ -1,9 +1,10 @@
 "use client"
 import { TypingTitle } from "@/components/typing-title"
+import React from "react"; // Added missing import for React
 
 interface TimelineEntry {
   year: string;
-  institution: string;
+  institution: string | React.ReactNode;
   degree: string;
   description: string;
   type: "education" | "experience";
@@ -27,7 +28,7 @@ const rawTimelineItems: TimelineEntry[] = [
     type: "education"
   },
   {
-    year: "June 2025",
+    year: "July 2025", // Changed from June 2025
     institution: "Faculty of Sciences and Techniques, Settat, Morocco",
         degree: "Bachelor in Information system and digital transformation",
     description:
@@ -35,11 +36,11 @@ const rawTimelineItems: TimelineEntry[] = [
     type: "education"
   },
   {
-    year: "Avril 2025 - June 2025",
+    year: "June 2025", // Changed from Avril 2025 - June 2025
     degree: "Full Stack Developer",
-    institution: "TASMIM WEB (www.tasmimweb.com)",
+    institution: <a href="https://www.tasmimweb.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">TASMIM WEB</a>,
     description:
-      "Developed a full-stack e-commerce website with React.js, Node.js, TypeScript, MySQL, and other modern web technologies, including admin/client dashboards for product, order, and user management.",
+      "Developed a full-stack e-commerce website with React.js, Node.js, TypeScript, MySQL, and other modern web technologies, including admin/client dashboards for product, order, and user management. (Avril 2025 - June 2025) (2 months)", // Added duration
     type: "experience"
   },
   {
@@ -114,7 +115,7 @@ export function EducationTimeline() {
                       </span>
                       {/* Glowing Timeline Dot - positioned over the line, behind the year text */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white/30 shadow-lg shadow-blue-500/50 animate-ping z-0" />
-                    </div>
+                  </div>
 
                     {/* Right Section: Description */}
                     <div className="flex-1 text-center md:text-left pl-0 md:pl-16 order-3 md:order-3 mt-4 md:mt-0">
