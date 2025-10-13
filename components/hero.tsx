@@ -166,7 +166,7 @@ export function Hero() {
             </div>
 
             {/* Professional Tech Stack Card */}
-            <div className="relative w-full max-w-6xl mx-auto group">
+            <div className="relative w-full max-w-full group">
               {/* Card Background with Space Theme */}
               <div className="relative bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-black/95 backdrop-blur-xl border border-teal-500/30 rounded-2xl p-8 shadow-2xl shadow-teal-500/10 overflow-hidden transition-all duration-700 transform hover:scale-[1.02] hover:shadow-teal-500/20 hover:shadow-3xl hover:border-teal-400/50 hover:-translate-y-1">
                 {/* Enhanced Animated Background Pattern */}
@@ -312,13 +312,13 @@ export function Hero() {
               <div className="absolute -top-4 -right-4 bg-gradient-to-br from-indigo-900/90 to-purple-900/90 backdrop-blur-sm border border-indigo-500/30 rounded-lg px-4 py-2 shadow-lg animate-float-pro animation-delay-500 group-hover:scale-110 group-hover:shadow-indigo-400/40 transition-all duration-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-indigo-400 animate-pulse" />
-                  <p className="text-sm font-semibold text-indigo-300">AI & ML Enthusiast</p>
+                  <p className="text-sm font-semibold text-indigo-300">Intelligent Systems</p>
                 </div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-purple-900/90 to-pink-900/90 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-2 shadow-lg animate-float-pro animation-delay-1500 group-hover:scale-110 group-hover:shadow-purple-400/40 transition-all duration-500">
                 <div className="flex items-center gap-2">
                   <Layout className="h-4 w-4 text-pink-400 animate-pulse" />
-                  <p className="text-sm font-semibold text-pink-300">Clean Code Advocate</p>
+                  <p className="text-sm font-semibold text-pink-300">Software Craftsmanship</p>
                 </div>
               </div>
             </div>
