@@ -98,7 +98,7 @@ export function EducationTimeline() {
                   style={{ animationDelay: `${index * 150 + 200}ms` }}
                 >
                   {/* Content Wrapper for each item - centers around the timeline */}
-                  <div className="flex flex-col md:flex-row items-center md:items-stretch w-full max-w-4xl text-left">
+                  <div className="flex flex-col md:flex-row items-center md:items-stretch w-full text-left">
 
                     {/* Left Section: Diploma and Institution */}
                     <div className="flex-1 text-center md:text-left pr-0 md:pr-16 order-1 md:order-1 mb-4 md:mb-0">
@@ -130,4 +130,5 @@ export function EducationTimeline() {
     </section>
   )
 }
+
 
