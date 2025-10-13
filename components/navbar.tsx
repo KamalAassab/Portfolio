@@ -1,18 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { Menu } from "lucide-react"
+import { Home, User2, Zap, Briefcase, Code, Mail, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 const navItems = [
-  { label: "HOME", href: "#hero", icon: "🏠" },
-  { label: "ABOUT", href: "#about", icon: "👨‍💻" },
-  { label: "SKILLS", href: "#skills", icon: "⚡" },
-  { label: "EXPERIENCE", href: "#experience", icon: "🎓" },
-  { label: "PROJECTS", href: "#projects", icon: "💻" },
-  { label: "CONTACT", href: "#contact", icon: "📧" },
+  { label: "HOME", href: "#hero", icon: <Home className="h-5 w-5" /> },
+  { label: "ABOUT", href: "#about", icon: <User2 className="h-5 w-5" /> },
+  { label: "SKILLS", href: "#skills", icon: <Zap className="h-5 w-5" /> },
+  { label: "EXPERIENCE", href: "#experience", icon: <Briefcase className="h-5 w-5" /> },
+  { label: "PROJECTS", href: "#projects", icon: <Code className="h-5 w-5" /> },
+  { label: "CONTACT", href: "#contact", icon: <Mail className="h-5 w-5" /> },
 ]
 
 export function Navbar() {
@@ -137,10 +137,21 @@ export function Navbar() {
 
                       {/* Icon with 3D Effect */}
                       <div className={cn(
-                        "relative z-10 text-lg transition-all duration-500",
-                        isActive ? "scale-125 filter drop-shadow-lg" : "scale-100"
+                        "relative z-10 text-lg transition-all duration-300 transform",
+                        isActive ? "scale-50 opacity-0" : "scale-100 opacity-100",
+                        isHovered && !isActive ? "scale-110" : ""
                       )}>
                         {item.icon}
+                      </div>
+
+                      {/* Integrated Label with Rotation */}
+                      <div className={cn(
+                        "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-all duration-300 pointer-events-none",
+                        isActive ? "opacity-100 -rotate-90 z-20" : "opacity-0 rotate-0 -z-10"
+                      )}>
+                        <span className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent whitespace-nowrap">
+                          {item.label}
+                        </span>
                       </div>
 
                       {/* Hologram Scan Lines */}
@@ -163,50 +174,6 @@ export function Navbar() {
                         </>
                       )}
                     </button>
-
-                    {/* Floating Label with Magnetic Effect */}
-                    <div 
-        className={cn(
-                        "absolute right-full mr-4 top-1/2 -translate-y-1/2 transition-all duration-500 pointer-events-none",
-                        (isActive || isHovered) ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
-                      )}
-                    >
-                      <div className="relative px-4 py-2 bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-lg border border-cyan-400/30 shadow-2xl">
-                        {/* Animated Background */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg animate-pulse"></div>
-                        
-                        {/* Label Text */}
-                        <div className="relative flex items-center gap-2">
-                          <span className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                            {item.label}
-                          </span>
-                          {isActive && (
-                            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
-                          )}
-                        </div>
-
-                        {/* Arrow Pointer */}
-                        <div className="absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-l-8 border-l-slate-900/95 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
-
-                        {/* Sparkle Effects */}
-                        {isActive && (
-                          <div className="absolute inset-0">
-                            {Array.from({ length: 3 }).map((_, i) => (
-                              <div
-                                key={i}
-                                className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-                                style={{
-                                  left: `${20 + i * 30}%`,
-                                  top: `${20 + i * 30}%`,
-                                  animationDelay: `${i * 0.3}s`
-                                }}
-                              />
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
                     {/* Connection Lines to Active Node */}
                     {isActive && index > 0 && (
                       <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-0.5 h-8 bg-gradient-to-t from-cyan-400/50 to-transparent"></div>
