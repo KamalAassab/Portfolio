@@ -84,7 +84,7 @@ export function EducationTimeline() {
                   <div key={item.text} className="relative flex justify-center py-4 z-10"
                     style={{ animationDelay: `${item.delay}ms` }}
                   >
-                    <h2 className="text-3xl font-bold text-center text-white px-4 bg-black rounded-lg shadow-lg border border-purple-500/30">
+                    <h2 className="text-2xl font-bold text-center text-white px-4 bg-black rounded-lg shadow-lg border border-purple-500/30">
                       {item.text}
                     </h2>
                     {/* Removed Glowing Timeline Dot for title */}
