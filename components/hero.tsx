@@ -285,9 +285,22 @@ export function Hero() {
 
           {/* Right Column - Visual */}
           <div className="relative animate-fade-up animation-delay-200">
-            <div className="relative w-full max-w-md mx-auto">
-              {/* Redesigned Profile Avatar */}
-              <AvatarHero className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm" />
+            <div className="relative w-full max-w-md mx-auto group">
+              {/* Redesigned Profile Avatar Card Wrapper with Animations */}
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm
+                          transition-all duration-700 transform hover:scale-[1.02] hover:shadow-emerald-500/20 hover:shadow-3xl hover:border-emerald-400/50 hover:-translate-y-1">
+                <AvatarHero className="w-full h-full" />
+                {/* Subtle Background Effects for the card */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent" />
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-emerald-500/5 rounded-full blur-3xl" />
+                </div>
+                {/* Corner Accents for the card */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-emerald-400/50 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-emerald-400/50 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-emerald-400/50 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-400/50 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
+              </div>
 
               {/* Floating Tech Badges */}
               <div className="absolute -top-4 -right-4 bg-gray-900/90 backdrop-blur-sm border border-emerald-500/30 rounded-lg px-4 py-2 shadow-lg animate-float">
