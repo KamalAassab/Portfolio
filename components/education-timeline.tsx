@@ -87,8 +87,7 @@ export function EducationTimeline() {
                     <h2 className="text-3xl font-bold text-center text-white px-4 bg-black rounded-lg shadow-lg border border-purple-500/30">
                       {item.text}
                     </h2>
-                    {/* Glowing Timeline Dot for title */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white/30 shadow-lg shadow-blue-500/50 animate-ping z-0" />
+                    {/* Removed Glowing Timeline Dot for title */}
                   </div>
                 )
               }
@@ -117,8 +116,7 @@ export function EducationTimeline() {
                           entry.year
                         )}
                       </span>
-                      {/* Glowing Timeline Dot - positioned over the line, behind the year text */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white/30 shadow-lg shadow-blue-500/50 animate-ping z-0" />
+                      {/* Removed Glowing Timeline Dot - positioned over the line, behind the year text */}
                   </div>
 
                     {/* Right Section: Description */}
