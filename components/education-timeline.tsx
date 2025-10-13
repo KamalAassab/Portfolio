@@ -43,7 +43,7 @@ export function EducationTimeline() {
   return (
     <section id="experience" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="w-full space-y-12">
           <TypingTitle 
             text="My Career & Experience" 
             speed={80}
