@@ -7,7 +7,7 @@ const timelineItems = [
     institution: "Faculty of Sciences and Techniques, Settat, Morocco",
     degree: "Diploma in Scientific and Technical University Studies: Mathematics, Computer Science, and Physics",
     description:
-      "Interdisciplinary program covering foundational knowledge in mathematics, computer science fundamentals, and physics principles. Developed strong analytical and problem-solving skills.",
+      "Interdisciplinary program in math, CS, and physics. Developed strong analytical and problem-solving skills.",
     type: "education"
   },
   {
@@ -15,7 +15,7 @@ const timelineItems = [
     institution: "Faculty of Sciences and Techniques, Settat, Morocco",
         degree: "Bachelor in Information system and digital transformation",
     description:
-      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology, including web development, Java OOP, Power BI, UML/MERISE, and databases (SQL).",
+      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on web dev, Java OOP, Power BI, UML/MERISE, and databases (SQL).",
     type: "education"
   },
   {
@@ -23,7 +23,7 @@ const timelineItems = [
     degree: "Full Stack Developer",
     institution: "TASMIM WEB (www.tasmimweb.com)",
     description:
-      "Worked with React.js, TypeScript, Node.js, Shadcn UI, WebSocket, Esbuild, Cypress, Jest, Passport.js, MySQL, Express.js, Vite.js, Multer, Framer Motion. Built a complete e-commerce website selling hoodies and shirts, including admin/client dashboards where the admin can manage products, categories, orders, users, and contact form messages.",
+      "Developed a full-stack e-commerce website with React.js, Node.js, TypeScript, MySQL, and other modern web technologies, including admin/client dashboards for product, order, and user management.",
     type: "experience"
   },
   {
@@ -31,7 +31,7 @@ const timelineItems = [
     degree: "Freelance & Upskilling",
     institution: "Freelance",
     description:
-      "During this period, I worked as a freelancer for various clients, providing 3D and web services, while actively upskilling also in multiple areas increasing my Techstack.",
+      "Worked as a freelancer providing 3D and web services, while actively upskilling in various tech areas.",
     type: "experience"
   },
 ]
