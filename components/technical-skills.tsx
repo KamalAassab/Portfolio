@@ -738,7 +738,7 @@ export function TechnicalSkills() {
               title="Tools"
               icon={Wrench}
               skills={toolSkills}
-              color="text-orange-400"
+              color="text-green-400" // Changed from text-yellow-400 to text-green-400 for better visual consistency of hover shadows
               index={3}
             />
           </div>
