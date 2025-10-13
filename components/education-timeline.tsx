@@ -15,7 +15,7 @@ const timelineItems = [
     institution: "Faculty of Sciences and Techniques, Settat, Morocco",
         degree: "Bachelor in Information system and digital transformation",
     description:
-      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology.",
+      "Comprehensive study of information systems, digital project management, and transformative technologies. Focused on practical applications in business and technology, including web development, Java OOP, Power BI, UML/MERISE, and databases (SQL).",
     type: "education"
   },
   {
