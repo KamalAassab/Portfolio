@@ -287,9 +287,9 @@ export function Hero() {
           <div className="relative animate-fade-up animation-delay-200">
             <div className="relative w-full max-w-md mx-auto group">
               {/* Profile Picture Card Wrapper with Animations */}
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm
+              <div className="relative aspect-square w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm
                           transition-all duration-700 transform hover:scale-[1.02] hover:shadow-emerald-500/20 hover:shadow-3xl hover:border-emerald-400/50 hover:-translate-y-1">
-                <Image 
+                <Image
                   src="/avatar.jpg" 
                   alt="Kamal Aassab Profile Picture"
                   fill
