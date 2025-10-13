@@ -71,7 +71,7 @@ export function EducationTimeline() {
     <section id="experience" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="w-full space-y-12">
-          <div className="relative inline-block text-center mx-auto">
+          <div className="relative inline-block text-center mx-auto flex justify-center w-full">
             <TypingTitle 
               text="Professional Journey" // Reformulated title
               speed={80}
