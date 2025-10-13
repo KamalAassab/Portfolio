@@ -64,24 +64,7 @@ const VueIcon = () => (
        ]
 
 export function Hero() {
-  const [typedText, setTypedText] = React.useState("")
-  const fullText = "Front-end Developer"
-
-  React.useEffect(() => {
-    let index = 0
-    const timer = setInterval(() => {
-      if (index <= fullText.length) {
-        setTypedText(fullText.slice(0, index))
-        index++
-      } else {
-        clearInterval(timer)
-      }
-    }, 100)
-
-    return () => clearInterval(timer)
-  }, [])
-
-
+  // Removed typedText state and useEffect as TypingTitle handles it internally
 
   const scrollToProjects = () => {
     document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })
@@ -108,16 +91,22 @@ export function Hero() {
           <div className="space-y-8 animate-fade-up">
             <div className="space-y-4">
               <div className="terminal-prompt text-sm text-muted-foreground mb-2">
-                <span className="terminal-path">portfolio</span>
+                <span className="terminal-path">$ ~/portfolio</span>
                 <span className="terminal-cursor"></span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-balance font-mono text-white">
                 Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">Kamal</span>
               </h1>
-              <div className="text-2xl lg:text-3xl text-gray-300 font-medium min-h-[2.5rem] font-mono">
-                <span className="terminal-prompt text-sm mr-2 text-emerald-400">$</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">{typedText}</span>
-                <span className="terminal-cursor"></span>
+              <div className="relative inline-block">
+                <TypingTitle 
+                  text="Front-end Developer" 
+                  speed={80}
+                  delay={1000}
+                  className="text-2xl lg:text-3xl text-gray-300 font-medium font-mono"
+                />
+                {/* Epic animated underline */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full animate-pulse" />
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full blur-md animate-pulse" />
               </div>
             </div>
 

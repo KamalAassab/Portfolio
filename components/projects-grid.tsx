@@ -28,11 +28,16 @@ export function ProjectsGrid() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="space-y-12">
           <div className="space-y-4 animate-fade-up text-center">
-            <TypingTitle 
-              text="Featured Projects" 
-              speed={80}
-              delay={1000}
-            />
+            <div className="relative inline-block">
+              <TypingTitle 
+                text="Featured Projects" 
+                speed={80}
+                delay={1000}
+              />
+              {/* Epic animated underline */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full animate-pulse" />
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full blur-md animate-pulse" />
+            </div>
             <p className="text-lg text-muted-foreground mx-auto whitespace-nowrap">
               A selection of projects that showcase my expertise in building modern, performant web applications.
             </p>

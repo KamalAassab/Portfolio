@@ -122,11 +122,16 @@ export function ContactForm() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-up">
-            <TypingTitle 
-              text="Get In Touch" 
-              speed={80}
-              delay={2000}
-            />
+            <div className="relative inline-block">
+              <TypingTitle 
+                text="Get In Touch" 
+                speed={80}
+                delay={1000} // Consistent delay for section titles
+              />
+              {/* Epic animated underline */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full animate-pulse" />
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full blur-md animate-pulse" />
+            </div>
             <p className="text-lg text-gray-300 font-mono">
               &gt; Initiating communication protocols...
             </p>

@@ -41,11 +41,16 @@ export function About() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="space-y-4 animate-fade-up">
-            <TypingTitle 
-              text="About Me" 
-              speed={80}
-              delay={500}
-            />
+            <div className="relative inline-block">
+              <TypingTitle 
+                text="About Me" 
+                speed={80}
+                delay={1000} // Consistent delay for section titles
+              />
+              {/* Epic animated underline */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full animate-pulse" />
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full blur-md animate-pulse" />
+            </div>
             <ScrollReveal
               baseOpacity={0.1}
               enableBlur={true}
