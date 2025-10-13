@@ -81,7 +81,7 @@ export function EducationTimeline() {
             {mergedTimelineItems.map((item, index) => {
               if (item.type === "title") {
                 return (
-                  <div key={item.text} className="relative flex justify-center py-8 z-10 animate-fade-up"
+                  <div key={item.text} className="relative flex justify-center py-8 z-10"
                     style={{ animationDelay: `${item.delay}ms` }}
                   >
                     <h2 className="text-3xl font-bold text-center text-white px-4 bg-black rounded-lg shadow-lg border border-purple-500/30">
@@ -95,7 +95,7 @@ export function EducationTimeline() {
 
               const entry = item as TimelineEntry; // Type assertion for non-title items
               return (
-                <div key={`${entry.degree}-${index}`} className="relative flex flex-col md:flex-row justify-between items-center md:items-stretch py-8 animate-fade-up"
+                <div key={`${entry.degree}-${index}`} className="relative flex flex-col md:flex-row justify-between items-center md:items-stretch py-8"
                   style={{ animationDelay: `${index * 150 + 200}ms` }}
                 >
                   {/* Content Wrapper for each item - centers around the timeline */}
@@ -110,11 +110,9 @@ export function EducationTimeline() {
                     {/* Center Section: Year and Glowing Dot (acts as the timeline point) */}
                     <div className="relative w-24 flex-shrink-0 flex justify-center items-center order-2 md:order-2">
                       {/* Year on the timeline */}
-                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider animate-float-professional z-10 text-center">
+                      <span className="text-xl font-bold text-gray-300 font-mono tracking-wider z-10 text-center">
                         {entry.year.includes(' ') ? (
-                          <>
-                            {entry.year.split(' ')[0]}<br/>{entry.year.split(' ')[1]}
-                          </>
+                          <>{entry.year.split(' ')[0]}<br/>{entry.year.split(' ')[1]}</>
                         ) : (
                           entry.year
                         )}
