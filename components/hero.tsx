@@ -100,7 +100,7 @@ export function Hero() {
                   text="Hi, I'm Kamal" 
                   speed={80}
                   delay={500} // Shorter delay for the main title
-                  className="text-5xl lg:text-6xl font-bold text-balance font-mono text-white"
+                  className="text-4xl lg:text-5xl font-bold text-balance font-mono text-white" // Decreased font size
                 />
                 {/* Epic animated underline */}
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full animate-pulse" />

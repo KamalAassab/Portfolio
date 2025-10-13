@@ -76,7 +76,7 @@ export function EducationTimeline() {
               text="Professional Journey" // Reformulated title
               speed={80}
               delay={1000} // Consistent delay for section titles
-              className="text-5xl lg:text-6xl font-bold text-balance text-white font-mono"
+              className="text-4xl lg:text-5xl font-bold text-balance text-white font-mono" // Decreased font size
             />
             {/* Epic animated underline */}
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 rounded-full animate-pulse" />
