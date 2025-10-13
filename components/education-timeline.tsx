@@ -44,14 +44,14 @@ export function EducationTimeline() {
             <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500/20 via-blue-500/50 to-cyan-500/20 shadow-lg shadow-purple-500/20 animate-pulse" />
 
             {timelineItems.map((item, index) => (
-              <div key={index} className="relative flex items-center justify-center py-8 animate-fade-up"
+              <div key={index} className="relative flex flex-col md:flex-row justify-between items-center md:items-stretch py-8 animate-fade-up"
                 style={{ animationDelay: `${index * 150 + 200}ms` }}
               >
                 {/* Content Wrapper for each item - centers around the timeline */}
-                <div className="flex flex-col md:flex-row items-center md:items-stretch w-full max-w-4xl">
+                <div className="flex flex-col md:flex-row items-center md:items-stretch w-full max-w-4xl text-left">
 
                   {/* Left Section: Diploma and Institution */}
-                  <div className="flex-1 text-center md:text-right pr-0 md:pr-16 order-1 md:order-1 mb-4 md:mb-0">
+                  <div className="flex-1 text-center md:text-left pr-0 md:pr-16 order-1 md:order-1 mb-4 md:mb-0">
                     <h3 className="text-xl font-bold text-white">{item.degree}</h3>
                     <p className="text-gray-400 text-sm">{item.institution}</p>
                   </div>
