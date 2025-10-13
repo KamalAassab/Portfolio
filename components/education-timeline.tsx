@@ -19,6 +19,14 @@ const timelineItems = [
     type: "education"
   },
   {
+    year: "Avril 2025 - June 2025",
+    degree: "Full Stack Developer",
+    institution: "TASMIM WEB (www.tasmimweb.com)",
+    description:
+      "Worked with React.js, TypeScript, Node.js, Shadcn UI, WebSocket, Esbuild, Cypress, Jest, Passport.js, MySQL, Express.js, Vite.js, Multer, Framer Motion. Built a complete e-commerce website selling hoodies and shirts, including admin/client dashboards where the admin can manage products, categories, orders, users, and contact form messages.",
+    type: "experience"
+  },
+  {
     year: "NOW",
     degree: "Freelance & Upskilling",
     institution: "Freelance",
