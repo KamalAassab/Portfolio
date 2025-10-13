@@ -69,7 +69,7 @@ export function Navbar() {
         {/* Cosmic Background Container */}
         <div className="relative">
           {/* Central Orbital Hub */}
-          <div className="relative w-20 h-80">
+          <div className="relative w-20 h-[450px]">
             {/* Animated Orbital Rings */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute w-16 h-16 border border-cyan-400/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
@@ -93,9 +93,10 @@ export function Navbar() {
                     {/* Orbital Node Button */}
                     <button
                       onClick={() => scrollToSection(item.href)}
-                      className={cn(
-                        "relative w-12 h-12 rounded-xl backdrop-blur-xl transition-all duration-500 transform",
+        className={cn(
+                        "relative w-12 rounded-xl backdrop-blur-xl transition-all duration-500 transform",
                         "flex items-center justify-center overflow-hidden",
+                        isActive ? "h-28" : "h-12", // Conditional height for active button
                         isActive 
                           ? "bg-gradient-to-br from-cyan-500/40 via-purple-500/40 to-emerald-500/40 scale-110 shadow-2xl shadow-cyan-500/50" 
                           : "bg-slate-900/70 hover:bg-slate-800/90 hover:scale-105 border border-cyan-500/30 hover:border-cyan-400/60"
