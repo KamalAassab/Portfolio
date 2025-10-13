@@ -6,8 +6,8 @@ import { ArrowDown, Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { TypingTitle } from "@/components/typing-title"
-import { AvatarHero } from "@/components/avatar-hero"
 // Removed SpaceAvatar import - using simple profile image instead
+// Removed AvatarHero import - using Image component instead
 
 // Tech Stack Icons
 const ReactIcon = () => (
@@ -286,10 +286,16 @@ export function Hero() {
           {/* Right Column - Visual */}
           <div className="relative animate-fade-up animation-delay-200">
             <div className="relative w-full max-w-md mx-auto group">
-              {/* Redesigned Profile Avatar Card Wrapper with Animations */}
+              {/* Profile Picture Card Wrapper with Animations */}
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm
                           transition-all duration-700 transform hover:scale-[1.02] hover:shadow-emerald-500/20 hover:shadow-3xl hover:border-emerald-400/50 hover:-translate-y-1">
-                <AvatarHero className="w-full h-full" />
+                <Image 
+                  src="/avatar.jpg" 
+                  alt="Kamal Aassab Profile Picture"
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
                 {/* Subtle Background Effects for the card */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent" />
