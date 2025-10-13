@@ -5,6 +5,7 @@ import Image from "next/image"
 import { ArrowDown, Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { TypingTitle } from "@/components/typing-title"
 // Removed SpaceAvatar import - using simple profile image instead
 
 // Tech Stack Icons
