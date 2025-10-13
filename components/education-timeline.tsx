@@ -38,7 +38,10 @@ const rawTimelineItems: TimelineEntry[] = [
   {
     year: "June 2025", // Changed from Avril 2025 - June 2025
     degree: "Full Stack Developer (Internship)",
-    institution: <a href="https://www.tasmimweb.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">TASMIM WEB</a>,
+    institution: (<>
+      <a href="https://www.tasmimweb.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">TASMIM WEB</a>
+      <span className="block text-gray-500 text-xs mt-0.5">Casablanca, Morocco</span>
+    </>),
     description:
       "Developed a full-stack e-commerce website with React.js, Node.js, TypeScript, MySQL, and other modern web technologies, including admin/client dashboards for product, order, and user management. April - June 2025 (2 months)", // Rephrased duration
     type: "experience"
