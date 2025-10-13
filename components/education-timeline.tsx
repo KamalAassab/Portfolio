@@ -71,11 +71,17 @@ export function EducationTimeline() {
     <section id="experience" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="w-full space-y-12">
-          <TypingTitle 
-            text="Professional Journey" // Reformulated title
-            speed={80}
-            delay={1500}
-          />
+          <div className="relative inline-block text-center mx-auto">
+            <TypingTitle 
+              text="Professional Journey" // Reformulated title
+              speed={80}
+              delay={1000} // Consistent delay for section titles
+              className="text-5xl lg:text-6xl font-bold text-balance text-white font-mono"
+            />
+            {/* Epic animated underline */}
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 rounded-full animate-pulse" />
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 rounded-full blur-md animate-pulse" />
+          </div>
 
           <div className="relative mt-12">
             {/* Main Timeline Line with Glowing Orb */}

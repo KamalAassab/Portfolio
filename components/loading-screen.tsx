@@ -268,52 +268,53 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
                     <div 
                       className="h-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-full transition-all duration-300 relative overflow-hidden"
                       style={{ width: `${progress}%` }}
+                      suppressHydrationWarning
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" suppressHydrationWarning></div>
                     </div>
                   </div>
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 rounded-full animate-pulse"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 rounded-full animate-pulse" suppressHydrationWarning></div>
                 </div>
               </div>
 
               {/* Status Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="space-y-3">
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">Core Systems</div>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" suppressHydrationWarning>
+                <div className="space-y-3" suppressHydrationWarning>
+                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2" suppressHydrationWarning>Core Systems</div>
+                  <div className="space-y-2" suppressHydrationWarning>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">React Framework</span>
                       <span className="text-xs text-emerald-400 ml-auto">✓</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">Next.js Engine</span>
                       <span className="text-xs text-emerald-400 ml-auto">✓</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">TypeScript Compiler</span>
                       <span className="text-xs text-emerald-400 ml-auto">✓</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="space-y-3">
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">Services</div>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                <div className="space-y-3" suppressHydrationWarning>
+                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2" suppressHydrationWarning>Services</div>
+                  <div className="space-y-2" suppressHydrationWarning>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">UI Components</span>
                       <span className="text-xs text-emerald-400 ml-auto">✓</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">Animation Engine</span>
                       <span className="text-xs text-emerald-400 ml-auto">✓</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></div>
+                    <div className="flex items-center space-x-3" suppressHydrationWarning>
+                      <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" suppressHydrationWarning></div>
                       <span className="text-sm font-mono text-gray-300">Portfolio Assets</span>
                       <span className="text-xs text-yellow-400 ml-auto">⏳</span>
                     </div>
@@ -322,14 +323,14 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
               </div>
 
               {/* Current Operation */}
-              <div className="bg-gray-800/30 rounded-lg p-4 border border-gray-700/50">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></div>
-                  <div className="flex-1">
-                    <div className="text-sm font-mono text-cyan-400 font-medium">
+              <div className="bg-gray-800/30 rounded-lg p-4 border border-gray-700/50" suppressHydrationWarning>
+                <div className="flex items-center space-x-3" suppressHydrationWarning>
+                  <div className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" suppressHydrationWarning></div>
+                  <div className="flex-1" suppressHydrationWarning>
+                    <div className="text-sm font-mono text-cyan-400 font-medium" suppressHydrationWarning>
                       Initializing Portfolio Environment
                     </div>
-                    <div className="text-xs text-gray-400 font-mono mt-1">
+                    <div className="text-xs text-gray-400 font-mono mt-1" suppressHydrationWarning>
                       Loading components and preparing deployment...
                     </div>
                   </div>
@@ -338,9 +339,9 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
             </div>
 
             {/* Professional Loading Indicator */}
-            <div className="space-y-4 text-center">
-              <div className="relative w-20 h-20 mx-auto">
-                <svg className="w-full h-full" viewBox="0 0 100 100">
+            <div className="space-y-4 text-center" suppressHydrationWarning>
+              <div className="relative w-20 h-20 mx-auto" suppressHydrationWarning>
+                <svg className="w-full h-full" viewBox="0 0 100 100" suppressHydrationWarning>
                   {/* Background circle */}
                   <circle
                     className="text-emerald-500/20 stroke-current"
@@ -349,6 +350,7 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
                     cy="50"
                     r="47"
                     fill="transparent"
+                    suppressHydrationWarning
                   />
                   {/* Progress circle */}
                   <circle
@@ -361,12 +363,13 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
                     strokeDasharray={`${2 * Math.PI * 47}`}
                     strokeDashoffset={`${2 * Math.PI * 47 - (progress / 100) * (2 * Math.PI * 47)}`}
                     transform="rotate(-90 50 50)"
+                    suppressHydrationWarning
                   />
                 </svg>
                 {/* Inner glowing effect */}
-                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 rounded-full blur-md animate-pulse mx-auto transition-all duration-300 opacity-50"></div>
+                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 rounded-full blur-md animate-pulse mx-auto transition-all duration-300 opacity-50" suppressHydrationWarning></div>
               </div>
-              <div className="text-sm font-mono text-gray-300">
+              <div className="text-sm font-mono text-gray-300" suppressHydrationWarning>
                 <span className="text-emerald-400">Initializing</span> portfolio environment... {progress}%
               </div>
             </div>
@@ -375,91 +378,92 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
 
         {/* Professional START Button - Only show when complete */}
         {isComplete && (
-          <div className="space-y-12 text-center">
-            <div className="flex items-center justify-center space-x-3 text-green-400">
-              <CheckCircle className="w-8 h-8" />
-              <span className="text-2xl font-mono font-bold">Mission Ready!</span>
+          <div className="space-y-12 text-center" suppressHydrationWarning>
+            <div className="flex items-center justify-center space-x-3 text-green-400" suppressHydrationWarning>
+              <CheckCircle className="w-8 h-8" suppressHydrationWarning />
+              <span className="text-2xl font-mono font-bold" suppressHydrationWarning>Mission Ready!</span>
             </div>
             
-            <div className="text-lg text-gray-300 font-mono mb-8">
-              <span className="text-green-400">//</span> Portfolio systems online and ready for deployment
+            <div className="text-lg text-gray-300 font-mono mb-8" suppressHydrationWarning>
+              <span className="text-green-400" suppressHydrationWarning>//</span> Portfolio systems online and ready for deployment
             </div>
             
-            <div className="text-sm text-emerald-400 font-mono mb-4 animate-pulse">
+            <div className="text-sm text-emerald-400 font-mono mb-4 animate-pulse" suppressHydrationWarning>
               🚀 Mission Ready - Deploy Portfolio to Begin
             </div>
             
             {/* Professional Swimming Button */}
-            <div className="relative w-full h-32 flex items-center justify-center">
+            <div className="relative w-full h-32 flex items-center justify-center" suppressHydrationWarning>
               {/* Swimming button container */}
-              <div className="absolute animate-swim-professional">
+              <div className="absolute animate-swim-professional" suppressHydrationWarning>
                 <button
                   onClick={onStart}
                   className="group relative px-12 py-6 text-lg font-mono font-bold bg-gradient-to-br from-slate-800 via-gray-900 to-black border-2 border-emerald-400/60 rounded-2xl shadow-2xl hover:shadow-emerald-400/60 hover:shadow-2xl transition-all duration-700 transform hover:scale-115 hover:border-emerald-300 hover:-translate-y-2 cursor-pointer overflow-hidden hover:rotate-1"
+                  suppressHydrationWarning
                 >
                   {/* Enhanced animated background glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/15 to-cyan-500/10 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/20 group-hover:via-teal-500/25 group-hover:to-cyan-500/20 transition-all duration-700"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/15 to-cyan-500/10 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/20 group-hover:via-teal-500/25 group-hover:to-cyan-500/20 transition-all duration-700" suppressHydrationWarning></div>
                   
                   {/* Additional hover glow layer */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/5 via-transparent to-teal-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/5 via-transparent to-teal-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:animate-pulse" suppressHydrationWarning></div>
                   
                   {/* Shimmer effect on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" suppressHydrationWarning></div>
                   
                   {/* Enhanced floating particles */}
-                  <div className="absolute -top-2 -left-2 w-2 h-2 bg-emerald-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-emerald-300 transition-all duration-500"></div>
-                  <div className="absolute -top-1 -right-3 w-1.5 h-1.5 bg-teal-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-teal-300 transition-all duration-500" style={{animationDelay: '0.5s'}}></div>
-                  <div className="absolute -bottom-2 -left-1 w-1 h-1 bg-cyan-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-cyan-300 transition-all duration-500" style={{animationDelay: '1s'}}></div>
-                  <div className="absolute -bottom-1 -right-2 w-2 h-2 bg-emerald-300/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-emerald-200 transition-all duration-500" style={{animationDelay: '1.5s'}}></div>
+                  <div className="absolute -top-2 -left-2 w-2 h-2 bg-emerald-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-emerald-300 transition-all duration-500" suppressHydrationWarning></div>
+                  <div className="absolute -top-1 -right-3 w-1.5 h-1.5 bg-teal-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-teal-300 transition-all duration-500" style={{animationDelay: '0.5s'}} suppressHydrationWarning></div>
+                  <div className="absolute -bottom-2 -left-1 w-1 h-1 bg-cyan-400/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-cyan-300 transition-all duration-500" style={{animationDelay: '1s'}} suppressHydrationWarning></div>
+                  <div className="absolute -bottom-1 -right-2 w-2 h-2 bg-emerald-300/80 rounded-full animate-ping group-hover:animate-pulse group-hover:scale-150 group-hover:bg-emerald-200 transition-all duration-500" style={{animationDelay: '1.5s'}} suppressHydrationWarning></div>
                   
                   {/* Additional hover particles */}
-                  <div className="absolute -top-3 -left-1 w-1 h-1 bg-teal-300/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-500" style={{animationDelay: '0.3s'}}></div>
-                  <div className="absolute -bottom-3 -right-1 w-1 h-1 bg-cyan-300/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-500" style={{animationDelay: '0.7s'}}></div>
+                  <div className="absolute -top-3 -left-1 w-1 h-1 bg-teal-300/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-500" style={{animationDelay: '0.3s'}} suppressHydrationWarning></div>
+                  <div className="absolute -bottom-3 -right-1 w-1 h-1 bg-cyan-300/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-500" style={{animationDelay: '0.7s'}} suppressHydrationWarning></div>
                   
                   {/* Button content */}
-                  <div className="relative z-10 flex items-center space-x-4">
+                  <div className="relative z-10 flex items-center space-x-4" suppressHydrationWarning>
                     {/* Enhanced developer icon */}
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center group-hover:animate-spin group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-700">
-                      <span className="text-black font-bold text-sm group-hover:animate-pulse">{'<>'}</span>
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center group-hover:animate-spin group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-700" suppressHydrationWarning>
+                      <span className="text-black font-bold text-sm group-hover:animate-pulse" suppressHydrationWarning>{'<>'}</span>
                     </div>
                     
                     {/* Enhanced button text */}
-                    <span className="tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-400 to-cyan-400 group-hover:from-emerald-200 group-hover:via-teal-300 group-hover:to-cyan-300 group-hover:drop-shadow-lg group-hover:drop-shadow-emerald-400/50 transition-all duration-500 font-mono group-hover:scale-105">
+                    <span className="tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-400 to-cyan-400 group-hover:from-emerald-200 group-hover:via-teal-300 group-hover:to-cyan-300 group-hover:drop-shadow-lg group-hover:drop-shadow-emerald-400/50 transition-all duration-500 font-mono group-hover:scale-105" suppressHydrationWarning>
                       DEPLOY PORTFOLIO
                     </span>
                     
                     {/* Enhanced rocket icon */}
-                    <div className="w-7 h-7 text-emerald-400 group-hover:translate-x-2 group-hover:scale-125 group-hover:animate-pulse transition-all duration-500">
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full group-hover:drop-shadow-lg group-hover:drop-shadow-emerald-400/50">
-                        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                    <div className="w-7 h-7 text-emerald-400 group-hover:translate-x-2 group-hover:scale-125 group-hover:animate-pulse transition-all duration-500" suppressHydrationWarning>
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full group-hover:drop-shadow-lg group-hover:drop-shadow-emerald-400/50" suppressHydrationWarning>
+                        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor" suppressHydrationWarning/>
                       </svg>
                     </div>
                   </div>
                   
                   {/* Hover effect particles */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-emerald-400 rounded-full animate-ping"></div>
-                    <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-teal-400 rounded-full animate-ping" style={{animationDelay: '0.2s'}}></div>
-                    <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '0.4s'}}></div>
-                    <div className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-emerald-300 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" suppressHydrationWarning>
+                    <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-emerald-400 rounded-full animate-ping" suppressHydrationWarning></div>
+                    <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-teal-400 rounded-full animate-ping" style={{animationDelay: '0.2s'}} suppressHydrationWarning></div>
+                    <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '0.4s'}} suppressHydrationWarning></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-emerald-300 rounded-full animate-ping" style={{animationDelay: '0.6s'}} suppressHydrationWarning></div>
                   </div>
                   
                   {/* Enhanced corner accents */}
-                  <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-emerald-400/60 group-hover:border-emerald-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-500 rounded-tl-lg"></div>
-                  <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-teal-400/60 group-hover:border-teal-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-teal-400/50 transition-all duration-500 rounded-tr-lg" style={{animationDelay: '0.1s'}}></div>
-                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400/60 group-hover:border-cyan-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-cyan-400/50 transition-all duration-500 rounded-bl-lg" style={{animationDelay: '0.2s'}}></div>
-                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-emerald-400/60 group-hover:border-emerald-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-500 rounded-br-lg" style={{animationDelay: '0.3s'}}></div>
+                  <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-emerald-400/60 group-hover:border-emerald-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-500 rounded-tl-lg" suppressHydrationWarning></div>
+                  <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-teal-400/60 group-hover:border-teal-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-teal-400/50 transition-all duration-500 rounded-tr-lg" style={{animationDelay: '0.1s'}} suppressHydrationWarning></div>
+                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyan-400/60 group-hover:border-cyan-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-cyan-400/50 transition-all duration-500 rounded-bl-lg" style={{animationDelay: '0.2s'}} suppressHydrationWarning></div>
+                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-emerald-400/60 group-hover:border-emerald-300 group-hover:animate-pulse group-hover:shadow-lg group-hover:shadow-emerald-400/50 transition-all duration-500 rounded-br-lg" style={{animationDelay: '0.3s'}} suppressHydrationWarning></div>
                   
                   {/* Additional corner glow effects */}
-                  <div className="absolute top-0 left-0 w-4 h-4 bg-emerald-400/10 rounded-tl-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
-                  <div className="absolute top-0 right-0 w-4 h-4 bg-teal-400/10 rounded-tr-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.1s'}}></div>
-                  <div className="absolute bottom-0 left-0 w-4 h-4 bg-cyan-400/10 rounded-bl-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.2s'}}></div>
-                  <div className="absolute bottom-0 right-0 w-4 h-4 bg-emerald-400/10 rounded-br-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.3s'}}></div>
+                  <div className="absolute top-0 left-0 w-4 h-4 bg-emerald-400/10 rounded-tl-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" suppressHydrationWarning></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 bg-teal-400/10 rounded-tr-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.1s'}} suppressHydrationWarning></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 bg-cyan-400/10 rounded-bl-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.2s'}} suppressHydrationWarning></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 bg-emerald-400/10 rounded-br-lg opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500" style={{animationDelay: '0.3s'}} suppressHydrationWarning></div>
                 </button>
               </div>
             </div>
             
-            <div className="text-sm text-gray-400 font-mono animate-fade-in-out">
+            <div className="text-sm text-gray-400 font-mono animate-fade-in-out" suppressHydrationWarning>
               Ready to explore the portfolio
             </div>
           </div>
