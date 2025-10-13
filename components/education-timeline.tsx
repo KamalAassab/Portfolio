@@ -48,7 +48,7 @@ const rawTimelineItems: TimelineEntry[] = [
     degree: "Freelance & Upskilling",
     institution: "Freelance",
     description:
-      "Worked as a freelancer providing 3D and web services, while actively upskilling in various tech areas.",
+      "Worked as a frontend developer (occasionally backend, though with limited backend skills) providing 3D and web services, while actively upskilling in various tech areas.",
     type: "experience"
   },
 ]
