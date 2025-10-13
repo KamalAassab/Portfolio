@@ -72,7 +72,7 @@ export function EducationTimeline() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="w-full space-y-12">
           <TypingTitle 
-            text="My Career & Experience" 
+            text="Professional Journey" // Reformulated title
             speed={80}
             delay={1500}
           />
