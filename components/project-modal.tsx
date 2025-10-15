@@ -24,41 +24,64 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
     }
   }, [open])
 
+  // Ensure current image index is always valid
+  React.useEffect(() => {
+    if (project && project.images.length > 0) {
+      if (currentImageIndex >= project.images.length) {
+        setCurrentImageIndex(0)
+      }
+    }
+  }, [project, currentImageIndex])
+
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!open || !project) return
+      if (!open || !project || project.images.length === 0) return
 
       if (e.key === "ArrowLeft") {
+        e.preventDefault()
         setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))
       } else if (e.key === "ArrowRight") {
+        e.preventDefault()
         setCurrentImageIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))
       }
     }
 
-    window.addEventListener("keydown", handleKeyDown)
+    if (open) {
+      window.addEventListener("keydown", handleKeyDown)
+    }
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [open, project])
 
   if (!project) return null
 
-  const nextImage = () => {
+  const nextImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation()
+    if (!project || project.images.length === 0) return
     setCurrentImageIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))
   }
 
-  const prevImage = () => {
+  const prevImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation()
+    if (!project || project.images.length === 0) return
     setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))
+  }
+
+  const goToImage = (index: number, e?: React.MouseEvent) => {
+    e?.stopPropagation()
+    if (!project || project.images.length === 0) return
+    setCurrentImageIndex(index)
   }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="!w-[85vw] !max-w-5xl max-h-[95vh] overflow-y-auto mx-4">
         <DialogHeader>
           <DialogTitle className="text-2xl">{project.title}</DialogTitle>
         </DialogHeader>
 
         <div className="space-y-6">
           {/* Image Carousel */}
-          <div className="relative aspect-video bg-muted rounded-lg overflow-hidden group">
+          <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden group">
             <Image
               src={project.images[currentImageIndex] || "/placeholder.svg"}
               alt={`${project.title} screenshot ${currentImageIndex + 1}`}
@@ -72,7 +95,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 opacity-70 hover:opacity-100 transition-opacity z-10"
                   onClick={prevImage}
                   aria-label="Previous image"
                 >
@@ -81,21 +104,21 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 opacity-70 hover:opacity-100 transition-opacity z-10"
                   onClick={nextImage}
                   aria-label="Next image"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </Button>
 
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                   {project.images.map((_, index) => (
                     <button
                       key={index}
-                      className={`w-2 h-2 rounded-full transition-all ${
+                      className={`w-2 h-2 rounded-full transition-all hover:scale-125 ${
                         index === currentImageIndex ? "bg-primary w-8" : "bg-primary/30"
                       }`}
-                      onClick={() => setCurrentImageIndex(index)}
+                      onClick={(e) => goToImage(index, e)}
                       aria-label={`Go to image ${index + 1}`}
                     />
                   ))}

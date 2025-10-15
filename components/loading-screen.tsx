@@ -361,8 +361,9 @@ export const LoadingScreen = React.memo(function LoadingScreen({ onStart }: Load
                     r="47"
                     fill="transparent"
                     strokeDasharray={`${2 * Math.PI * 47}`}
-                    strokeDashoffset={`${2 * Math.PI * 47 - (progress / 100) * (2 * Math.PI * 47)}`}
+                    strokeDashoffset={`${progress >= 100 ? 0 : 2 * Math.PI * 47 * (1 - progress / 100)}`}
                     transform="rotate(-90 50 50)"
+                    strokeLinecap="round"
                     suppressHydrationWarning
                   />
                 </svg>
