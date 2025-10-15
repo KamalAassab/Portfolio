@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { JetBrains_Mono, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { Suspense } from "react"
@@ -106,7 +105,6 @@ export default function RootLayout({
         {children}
             <Toaster />
           </ThemeProvider>
-        <Analytics />
         </Suspense>
       </body>
     </html>

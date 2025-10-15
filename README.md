@@ -190,20 +190,19 @@ npm run build
 npm run start
 \`\`\`
 
-### Deploy to Vercel (Recommended)
+### Deploy to Netlify (Recommended)
 
 1. Push your code to GitHub
-2. Import project on [Vercel](https://vercel.com)
-3. Vercel auto-detects Next.js and deploys
-4. Add environment variables in Vercel dashboard (if using email service)
+2. Import project on [Netlify](https://netlify.com)
+3. Netlify auto-detects Next.js and deploys using the included `netlify.toml` configuration
+4. Add environment variables in Netlify dashboard (if using email service)
 
-**Zero-config deployment!** Vercel handles everything automatically.
+**Zero-config deployment!** Netlify handles everything automatically with the included configuration.
 
-[Learn more about Vercel deployment](https://vercel.com/docs/deployments/overview)
+[Learn more about Netlify deployment](https://docs.netlify.com/site-deploys/create-deploys/)
 
 ### Deploy to Other Platforms
 
-- **Netlify**: Use `next export` for static export
 - **AWS Amplify**: Connect GitHub repo
 - **Docker**: Create Dockerfile with Node.js base image
 
@@ -217,7 +216,7 @@ npm run start
 - [ ] Test on mobile devices (iOS Safari, Android Chrome)
 - [ ] Run Lighthouse audit (target: 90+ all categories)
 - [ ] Test keyboard navigation and screen readers
-- [ ] Add Google Analytics or Vercel Analytics (optional)
+- [ ] Add Google Analytics or Netlify Analytics (optional)
 - [ ] Take screenshots for README
 - [ ] Update `package.json` with your details
 - [ ] Set up custom domain (optional)
@@ -239,8 +238,8 @@ npm run start
 - **UI Components**: shadcn/ui
 - **Icons**: Lucide React
 - **Fonts**: Inter (body), Poppins (headings)
-- **Analytics**: Vercel Analytics
-- **Deployment**: Vercel (recommended)
+- **Analytics**: Netlify Analytics
+- **Deployment**: Netlify (recommended)
 
 ## 📝 License
 
