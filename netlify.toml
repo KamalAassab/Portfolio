@@ -1,9 +1,9 @@
 [build]
-  # Build command for Next.js with legacy peer deps
+  # Build command for Next.js static export
   command = "npm install --legacy-peer-deps && npm run build"
   
-  # Output directory for Next.js
-  publish = ".next"
+  # Output directory for Next.js static export
+  publish = "out"
 
 [build.environment]
   # Node.js version
